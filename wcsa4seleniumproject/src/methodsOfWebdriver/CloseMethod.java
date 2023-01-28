@@ -1,0 +1,20 @@
+package methodsOfWebdriver;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CloseMethod {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+	
+System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+	
+	WebDriver driver=new ChromeDriver(); //to launch browser
+	driver.manage().window().maximize(); // maximize the window
+	driver.get("https://www.instagram.com");// to launch webapp
+	Thread.sleep(2000);
+	driver.close();//close parent and child window
+}
+}
